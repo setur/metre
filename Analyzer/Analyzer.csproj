@@ -1,0 +1,46 @@
+﻿<!-- <Project Sdk="Tassle.Sdk/0.9.0"> -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Configuration" />
+
+  <PropertyGroup>
+    <AssemblyName>Metre.Analyzer</AssemblyName>
+    <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+    <OutputType>library</OutputType>
+    <DocumentationFile>$(OutDir)Analyzer.xml</DocumentationFile>
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Setur.Metre</RootNamespace>
+    <Title>Metre.Cli</Title>
+    <Description>Analyzer Module for Metre Static Code Analysis Tool</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" Version="2.7.*" />
+    <PackageReference Include="Microsoft.Build" Version="15.1.*" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Framework" Version="15.1.*" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.Build.Locator" Version="1.2.*" />
+    <PackageReference Include="Microsoft.Build.Utilities.Core" Version="15.1.*" ExcludeAssets="runtime" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Common" Version="3.5.*" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Features" Version="3.5.*" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild" Version="3.5.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <PackageReference Include="System.Text.Json" Version="4.7.*" />
+    <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.11.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Shared/Shared.csproj" />
+  </ItemGroup>
+
+</Project>

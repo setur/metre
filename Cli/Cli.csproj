@@ -1,0 +1,49 @@
+﻿<!-- <Project Sdk="Tassle.Sdk/0.9.0"> -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Configuration" />
+
+  <PropertyGroup>
+    <AssemblyName>Metre.Cli</AssemblyName>
+    <TargetFrameworks>netcoreapp3.1;net48</TargetFrameworks>
+    <OutputType>exe</OutputType>
+    <DocumentationFile>$(OutDir)Cli.xml</DocumentationFile>
+    <StartupObject />
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <RootNamespace>Setur.Metre.Cli</RootNamespace>
+    <Title>Metre.Cli</Title>
+    <Description>Command Line Interface for Metre Static Code Analysis Tool</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" Version="2.7.*" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.*" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <PackageReference Include="System.Text.Json" Version="4.7.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../Shared/Shared.csproj" />
+    <ProjectReference Include="../Analyzer/Analyzer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources/Runtime.en.restext" />
+  </ItemGroup>
+
+  <!-- <ItemGroup>
+    <None Include="Dockerfile" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup> -->
+
+</Project>

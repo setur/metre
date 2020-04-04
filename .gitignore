@@ -1,0 +1,22 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor metadata
+# .vscode/
+.vs/
+*.swp
+
+# User-specific files
+*.suo
+*.user
+*.userprefs
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Environment settings
+.env
+.env.local
+.env.*.local

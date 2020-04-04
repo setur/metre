@@ -1,0 +1,58 @@
+{
+    "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+    "settings": {
+        "indentation": {
+            "indentationSize": 4,
+            "tabSize": 4,
+            "useTabs": false
+        },
+        "spacingRules": {},
+        "readabilityRules": {},
+        "orderingRules": {
+            "elementOrder": [
+                "kind",
+                "accessibility",
+                "constant",
+                "static",
+                "readonly"
+            ],
+            "blankLinesBetweenUsingGroups": "require",
+            "usingDirectivesPlacement": "outsideNamespace",
+            "systemUsingDirectivesFirst": false
+        },
+        "namingRules": {
+            "allowCommonHungarianPrefixes": false
+        },
+        "maintainabilityRules": {
+            "topLevelTypes": [
+                "class",
+                "interface",
+                "struct",
+                "enum",
+                "delegate"
+            ]
+        },
+        "layoutRules": {
+            "newlineAtEndOfFile": "require",
+            "allowConsecutiveUsings": false
+        },
+        "documentationRules": {
+            "companyName": "Setur",
+            "copyrightText": "Copyright (c) 2020 {owner}. All rights reserved.\n  Licensed under the {licenseName} license. See {licenseFile} file in the project root\n  for full license information.\n\n  Web: https://setur.com.tr/ GitHub: https://github.com/setur",
+            "headerDecoration": "--------------------------------------------------------------------------",
+            "xmlHeader": true,
+            "variables": {
+                "owner": "Setur (yazilim@setur.com.tr)",
+                "licenseName": "Apache-2.0",
+                "licenseFile": "LICENSE"
+            },
+            "documentInterfaces": true,
+            "documentExposedElements": true,
+            "documentInternalElements": false,
+            "documentPrivateElements": false,
+            "documentPrivateFields": false,
+            "documentationCulture": "en-US",
+            "fileNamingConvention": "stylecop"
+        }
+    }
+}
